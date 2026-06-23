@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion"
 import { resume } from "@/app/data/resume"
-import { fadeUp, stagger } from "@/app/lib/motion"
+import { fadeUp, fadeIn, stagger } from "@/app/lib/motion"
 
 const words = resume.name.split(" ")
 
@@ -50,7 +50,27 @@ export default function Hero() {
               {word}
             </motion.span>
           ))}
+          <motion.span
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.8 }}
+            className="inline-block w-[3px] ml-1 align-middle"
+            style={{
+              height: "0.85em",
+              backgroundColor: "var(--accent)",
+              animation: "blink 1.1s step-start infinite",
+            }}
+            aria-hidden="true"
+          />
         </motion.h1>
+
+        <style>{`
+          @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+          }
+        `}</style>
 
         {/* Subtitle */}
         <motion.p
