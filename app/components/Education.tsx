@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
-import { GraduationCap, BadgeCheck, Plus } from "lucide-react"
+import { GraduationCap, BadgeCheck } from "lucide-react"
 import { resume } from "@/app/data/resume"
 import { fadeUp, stagger } from "@/app/lib/motion"
 
@@ -78,27 +78,6 @@ export default function Education() {
             </motion.article>
           ))}
 
-          {/* Placeholder card */}
-          <motion.div
-            variants={fadeUp}
-            className="rounded-2xl border-2 border-dashed p-6 flex flex-col items-center justify-center gap-3 min-h-[180px]"
-            style={{ borderColor: "var(--border)" }}
-            aria-label="Placeholder for future certification"
-          >
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "var(--border)" }}
-              aria-hidden="true"
-            >
-              <Plus size={20} style={{ color: "var(--fg-muted)" }} />
-            </div>
-            <p className="text-sm font-medium" style={{ color: "var(--fg-muted)" }}>
-              + Add Certification
-            </p>
-            <p className="text-xs text-center" style={{ color: "var(--fg-muted)", opacity: 0.6 }}>
-              Future credentials will appear here
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
