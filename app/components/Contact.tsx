@@ -43,13 +43,13 @@ const LinkedinSVG = () => (
 const socials = [
   {
     SocialIcon: GithubSVG,
-    href: "#",
-    label: "GitHub profile (link placeholder)",
+    href: "https://github.com/bperez05",
+    label: "GitHub profile",
   },
   {
     SocialIcon: LinkedinSVG,
-    href: "#",
-    label: "LinkedIn profile (link placeholder)",
+    href: "https://www.linkedin.com/in/brandonperez05/",
+    label: "LinkedIn profile",
   },
   {
     SocialIcon: null,
