@@ -111,6 +111,22 @@ export default function Hero() {
           >
             Contact Me
           </a>
+          <a
+            href="/brandon-perez-resume.pdf"
+            download
+            className="px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200 border"
+            style={{ borderColor: "var(--border)", color: "var(--fg-muted)" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "var(--fg-muted)"
+              e.currentTarget.style.color = "var(--fg)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "var(--border)"
+              e.currentTarget.style.color = "var(--fg-muted)"
+            }}
+          >
+            Download Résumé
+          </a>
         </motion.div>
       </div>
 
