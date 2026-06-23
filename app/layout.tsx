@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Brandon P. Perez — Senior Technical Support Specialist",
   description:
     "Technical support professional with 6+ years at Apple, specializing in hardware, software, and mobile device troubleshooting.",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Brandon P. Perez",
     description: "Genius · Apple · Dallas, TX",
