@@ -39,7 +39,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           className="font-bold tracking-tight leading-none mb-6"
-          style={{ fontSize: "clamp(56px, 8vw, 96px)" }}
+          style={{ fontSize: "clamp(56px, 8vw, 96px)", fontFamily: "var(--font-playfair)" }}
         >
           {words.map((word, i) => (
             <motion.span
@@ -87,13 +87,14 @@ export default function Hero() {
         {/* Summary */}
         <motion.p
           variants={fadeUp}
+
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.55 }}
           className="text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
           style={{ color: "var(--fg-muted)" }}
         >
-          {resume.summary}
+          Technology analyst with 6+ years at Apple · structured diagnostics, MDM consultation & full-stack development. Bilingual EN/ES.
         </motion.p>
 
         {/* CTAs */}
