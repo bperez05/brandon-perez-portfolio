@@ -15,9 +15,11 @@ export interface Education {
 }
 
 export interface Skills {
-  technical: string[]
-  operatingSystems: string[]
+  analysis: string[]
+  platforms: string[]
   development: string[]
+  tools: string[]
+  soft: string[]
 }
 
 export interface ResumeData {
@@ -36,40 +38,42 @@ export interface ResumeData {
 
 export const resume: ResumeData = {
   name: "Brandon P. Perez",
-  title: "Senior Technical Support Specialist",
+  title: "Senior Technical Analyst",
   company: "Apple",
   location: "Dallas, TX",
   email: "brand.paul.perez@gmail.com",
   phone: "214-914-8599",
   languages: ["English", "Spanish"],
   summary:
-    "Technical support professional with 6+ years of experience at Apple specializing in hardware, software, and mobile device troubleshooting.",
+    "Technology analyst with 6+ years at Apple identifying root causes, evaluating solutions, and translating complex technical findings into clear recommendations for diverse audiences. Experienced in structured diagnostics, cross-functional collaboration, enterprise MDM consultation, and driving process improvements in high-volume, fast-paced environments. Full-stack development background with a track record of mentoring peers and communicating technical insights to both technical and non-technical stakeholders. Bilingual (English/Spanish).",
   experience: [
     {
-      role: "Genius – Senior Technical Support Specialist",
+      role: "Genius — Senior Technical Analyst",
       company: "Apple",
       location: "Dallas, TX",
       start: "Jan 2025",
       end: "Present",
       bullets: [
-        "Diagnose and resolve hardware, software, and OS issues across laptops, mobile devices, and peripherals.",
-        "Perform advanced troubleshooting: OS recovery, system restores, software reinstallation, device diagnostics.",
-        "Manage 20+ cases per day with high customer satisfaction and rapid issue resolution.",
-        "Mentor team members on troubleshooting workflows and best practices.",
-        "Maintain accurate service documentation and repair records for each case.",
+        "Lead structured technology evaluations across hardware, software, and OS platforms — identifying root causes, assessing solution alternatives, and recommending optimal resolutions to reduce downtime and improve outcomes.",
+        "Consult with the in-house business team on MDM configuration strategies tailored to each enterprise's unique operational needs while assessing requirements, evaluating deployment options, and recommending solutions that align with organizational scale and security standards.",
+        "Analyze trends across 20+ daily cases to surface recurring issues, translating findings into process improvements and preventative guidance adopted across the team.",
+        "Partner with engineering and senior technical teams on complex escalations, synthesizing diagnostic data into actionable insights that inform decisions on tooling, configuration, and system architecture.",
+        "Mentor team members on troubleshooting methodologies, diagnostic frameworks, and documentation best practices — accelerating ramp time and raising team-wide quality standards.",
+        "Maintain accurate service documentation and repair records, ensuring traceability and supporting knowledge management across the support organization.",
       ],
     },
     {
-      role: "Technical Support Specialist",
+      role: "Technical Support Analyst",
       company: "Apple",
       location: "Dallas, TX",
       start: "Aug 2019",
       end: "Dec 2024",
       bullets: [
-        "In-store software and hardware troubleshooting for all Apple products.",
-        "Multi-platform diagnostics ensuring prompt resolution of technical issues.",
-        "Demonstrated proficiency through two IT certifications.",
-        "Navigated complex customer situations using strong interpersonal and active-listening skills.",
+        "Conducted systematic software and hardware diagnostics across multi-platform environments (macOS, iOS, Windows, Android), applying structured methodologies to isolate root causes and implement effective solutions.",
+        "Evaluated and compared alternative technical approaches to problem resolution, weighing tradeoffs in efficiency, risk, and customer impact before recommending a path forward.",
+        "Built strong cross-functional relationships with operations, engineering, and logistics teams to coordinate complex repairs and reduce resolution time.",
+        "Earned two IT certifications demonstrating proficiency in technical standards and support methodologies.",
+        "Navigated ambiguous and high-pressure customer situations using active listening and structured problem-solving, consistently maintaining high satisfaction scores.",
       ],
     },
     {
@@ -79,9 +83,9 @@ export const resume: ResumeData = {
       start: "Jul 2015",
       end: "Aug 2015",
       bullets: [
-        "Identified and addressed flaws in local Central Offices.",
-        "Conducted wireline logging data acquisitions and generated field reports.",
-        "Collaborated with Wireline and Operations Project Management Team.",
+        "Analyzed network infrastructure data at local Central Offices to identify operational flaws and recommend improvements, contributing to reliability and efficiency.",
+        "Supported escalation tracking and problem resolution workflows in coordination with the Wireline and Operations Project Management Team.",
+        "Processed geophysical wireline data and generated field and final reports adhering to industry standards.",
       ],
     },
   ],
@@ -94,15 +98,25 @@ export const resume: ResumeData = {
     },
   ],
   skills: {
-    technical: [
-      "Mobile Device Management (MDM)",
-      "Hardware Diagnostics & Repair",
-      "macOS / iOS Troubleshooting",
-      "System Recovery & OS Reinstallation",
-      "Device Configuration & Setup",
-      "Customer Relationship Management",
+    analysis: [
+      "Root Cause Analysis",
+      "Structured Diagnostics",
+      "Solution Evaluation",
+      "Process Modeling",
+      "Requirements Documentation",
+      "Pilot Design & Assessment",
     ],
-    operatingSystems: ["macOS", "iOS", "Windows", "Linux", "Android"],
+    platforms: [
+      "macOS",
+      "iOS",
+      "Windows",
+      "Linux",
+      "Android",
+      "MDM Configuration",
+      "System Recovery",
+      "OS Reinstallation",
+      "Hardware Diagnostics & Repair",
+    ],
     development: [
       "HTML5",
       "CSS3",
@@ -111,11 +125,20 @@ export const resume: ResumeData = {
       "Node.js",
       "MongoDB",
       "MySQL",
-      "GitHub",
-      "Bootstrap",
-      "Firebase",
+    ],
+    tools: [
       "ServiceNow",
+      "GitHub",
+      "Firebase",
+      "Bootstrap",
       "Heroku",
+    ],
+    soft: [
+      "Cross-functional Stakeholder Communication",
+      "Mentorship",
+      "Technical Writing",
+      "Senior Leadership Presentations",
+      "Bilingual (English / Spanish)",
     ],
   },
 }

@@ -7,7 +7,7 @@ import { fadeUp, slideLeft, slideRight } from "@/app/lib/motion"
 
 const facts = [
   { icon: MapPin, label: "Location", value: resume.location },
-  { icon: Briefcase, label: "Role", value: "Genius — Senior Technical Support Specialist" },
+  { icon: Briefcase, label: "Role", value: "Genius — Senior Technical Analyst" },
   { icon: Building2, label: "Company", value: resume.company },
   { icon: Globe, label: "Languages", value: null },
   { icon: Clock, label: "Experience", value: "6+ Years" },

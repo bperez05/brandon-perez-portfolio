@@ -34,28 +34,27 @@ function SkillGroup({ title, pills, accent = false }: SkillGroupProps) {
         role="list"
       >
         {pills.map((pill) => (
-          <motion.li
-            key={pill}
-            variants={reduced ? fadeUp : pillVariant}
-          >
-            {accent ? (
-              <AccentPill label={pill} />
-            ) : (
-              <span
-                className="inline-flex px-3 py-1.5 rounded-full text-sm font-medium border"
-                style={{
-                  backgroundColor: "var(--card)",
-                  borderColor: "var(--border)",
-                  color: "var(--fg-muted)",
-                }}
-              >
-                {pill}
-              </span>
-            )}
+          <motion.li key={pill} variants={reduced ? fadeUp : pillVariant}>
+            {accent ? <AccentPill label={pill} /> : <DefaultPill label={pill} />}
           </motion.li>
         ))}
       </motion.ul>
     </div>
+  )
+}
+
+function DefaultPill({ label }: { label: string }) {
+  return (
+    <span
+      className="inline-flex px-3 py-1.5 rounded-full text-sm font-medium border"
+      style={{
+        backgroundColor: "var(--card)",
+        borderColor: "var(--border)",
+        color: "var(--fg-muted)",
+      }}
+    >
+      {label}
+    </span>
   )
 }
 
@@ -80,16 +79,13 @@ function AccentPill({ label }: { label: string }) {
       }}
     >
       {label}
-      <span
-        className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-1 rounded text-xs pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150"
-        style={{ backgroundColor: "var(--accent)", color: "#fff" }}
-        role="tooltip"
-      >
-        Development
-      </span>
     </span>
   )
 }
+
+const divider = (
+  <div className="border-t" style={{ borderColor: "var(--border)" }} />
+)
 
 export default function Skills() {
   return (
@@ -118,11 +114,15 @@ export default function Skills() {
         </motion.h2>
 
         <div className="space-y-10">
-          <SkillGroup title="Technical Skills" pills={resume.skills.technical} />
-          <div className="border-t" style={{ borderColor: "var(--border)" }} />
-          <SkillGroup title="Operating Systems" pills={resume.skills.operatingSystems} />
-          <div className="border-t" style={{ borderColor: "var(--border)" }} />
-          <SkillGroup title="Development Tools & Platforms" pills={resume.skills.development} accent />
+          <SkillGroup title="Analysis & Methodology" pills={resume.skills.analysis} />
+          {divider}
+          <SkillGroup title="Technology Platforms" pills={resume.skills.platforms} />
+          {divider}
+          <SkillGroup title="Development" pills={resume.skills.development} accent />
+          {divider}
+          <SkillGroup title="Tools & Platforms" pills={resume.skills.tools} accent />
+          {divider}
+          <SkillGroup title="Soft Skills" pills={resume.skills.soft} />
         </div>
       </div>
     </section>
