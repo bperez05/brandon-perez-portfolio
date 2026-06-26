@@ -39,7 +39,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           className="font-bold tracking-tight leading-none mb-6"
-          style={{ fontSize: "clamp(56px, 8vw, 96px)", fontFamily: "var(--font-playfair)" }}
+          style={{ fontSize: "clamp(56px, 8vw, 96px)" }}
         >
           {words.map((word, i) => (
             <motion.span

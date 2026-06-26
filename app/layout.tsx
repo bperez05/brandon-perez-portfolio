@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Lora, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/app/lib/theme-context"
 import Nav from "@/app/components/Nav"
 
-const inter = Inter({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-lora",
   display: "swap",
 })
 
@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${lora.variable} ${playfair.variable}`}>
         <ThemeProvider>
           <Nav />
           {children}
