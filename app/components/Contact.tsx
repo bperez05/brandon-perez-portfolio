@@ -98,7 +98,7 @@ export default function Contact() {
           Whether you have a question, opportunity, or just want to say hello — my inbox is always open.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-3 gap-12 items-center">
           {/* Contact details */}
           <motion.ul
             variants={reduced ? fadeUp : stagger}
@@ -193,6 +193,23 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
+            </div>
+          </motion.div>
+
+          {/* Headshot */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            className="flex justify-center md:justify-end"
+          >
+            <div className="w-48 h-48 rounded-full overflow-hidden border-2 mx-auto" style={{ borderColor: "var(--accent)" }}>
+              <img
+                src="/headshot.png"
+                alt="Brandon P. Perez"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </motion.div>
         </div>
