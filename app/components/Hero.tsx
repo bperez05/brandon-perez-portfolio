@@ -17,22 +17,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-svh flex flex-col items-center justify-center overflow-hidden px-6"
+      className="hero relative flex flex-col items-center justify-center px-6"
       aria-label="Introduction"
     >
-      {/* Dot grid background */}
-      <div className="dot-grid absolute inset-0 pointer-events-none" aria-hidden="true" />
-
-      {/* Radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse 60% 50% at 50% 50%, color-mix(in srgb, var(--accent) 8%, transparent), transparent)",
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="hero-content text-center max-w-4xl mx-auto w-full">
         {/* Name */}
         <motion.h1
           variants={stagger}

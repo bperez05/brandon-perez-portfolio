@@ -54,11 +54,64 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* Dot grid background for hero */
-.dot-grid {
-  background-image: radial-gradient(circle, var(--fg-muted) 1px, transparent 1px);
-  background-size: 32px 32px;
-  opacity: 0.08;
+/* Hero background */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(47, 116, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.10), transparent 25%),
+    linear-gradient(180deg, #07080b 0%, #030406 100%);
+}
+
+[data-theme="light"] .hero {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(47, 116, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.06), transparent 25%),
+    linear-gradient(180deg, #f0f4ff 0%, #f9fafb 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black, transparent 70%);
+  animation: gridMove 18s linear infinite;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1.5px);
+  background-size: 80px 80px;
+  opacity: 0.22;
+  animation: floatParticles 14s ease-in-out infinite alternate;
+}
+
+@keyframes gridMove {
+  from { transform: translateY(0); }
+  to   { transform: translateY(44px); }
+}
+
+@keyframes floatParticles {
+  from { transform: translateY(0) translateX(0); opacity: 0.15; }
+  to   { transform: translateY(-25px) translateX(15px); opacity: 0.35; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
 }
 
 /* Scrollbar */
